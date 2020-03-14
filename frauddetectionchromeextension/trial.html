@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <form method="POST">
+            <input type="password" name="password">
+            <input type="submit" name="submit" id="submit">
+        </form>
+        <script>
+            
+            var submitbtn = document.getElementsByName("submit")[0].addEventListener("click",function(event){
+            alert("bye");
+            var password = document.getElementsByName("password")[0].value;
+            alert(password);
+            });
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("POST","http://localhost/dashboard/iwplab/j-comp/receive.php",true);
+            xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhttp.send("fname=Henry&lname=Ford");
+            alert("Welcome to Amazon");
+
+        </script>
+    </body>
+</html>
