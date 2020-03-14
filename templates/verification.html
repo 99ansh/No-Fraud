@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Credit Card</title>
+  <!-- Styles -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+  <meta name="robots" content="noindex,follow" />
+</head>
+
+<body id="verification" >
+    <form class="credit-card" action="#">
+      <div class="form-header">
+        <h4 class="title">Credit card detail</h4>
+      </div>
+
+      <div class="form-body">
+        <!-- Card Number -->
+        <input type="text" class="card-number" id="cardnumber" placeholder="Card Number">
+        <!-- Card Verification Field -->
+        <div class="card-verification">
+          <div class="cvv-input">
+            <input type="password" placeholder="CVV" id="cvv">
+          </div>
+          <div class="cvv-details">
+            <p>3 digit number usually found <br> on the signature strip</p>
+          </div>
+        </div>
+        <input type="text" class="card-number" placeholder="Latitude" id="latitude" value='{{ d1 }}' readonly>
+        <input type="text" class="card-number" placeholder="Longitude" id="longitude" value='{{ d2 }}' readonly>
+        <input type="text" class="card-number" placeholder="Amount" id="amount" value='{{ d3 }}' readonly>
+        <!-- Buttons -->
+        <button type="submit" class="proceed-btn" id="predict_btn">Predict</button>
+        <!--<button type="submit" class="paypal-btn"><a href="#">Pay With</a></button>-->
+      </div>
+    </form>
+    
+</body>
+
+</html>
